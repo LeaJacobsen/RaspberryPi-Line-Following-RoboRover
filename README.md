@@ -2,6 +2,10 @@
 
 Projekt til faget **Udvidede indlejrede systemer**.
 
+**Status:** Work in progress. Første vellykkede testkørsel 1. oktober 2026.
+
+> Fork af gruppens repository. Koden er skrevet i fællesskab af gruppen; denne fork bruges til at vise projektet på min GitHub-profil.
+
 ## Formål
 
 Formålet med projektet er at bygge og programmere en autonom line-following robot baseret på en Raspberry Pi 3.
@@ -125,4 +129,33 @@ Python-koden placeres i:
 src/
 ```
 
-Den konkrete kommando til at starte robotprogrammet dokumenteres her, når den endelige Python-kode og filstruktur er fastlagt.
+Første gang Raspberry Pi'en sættes op:
+
+```bash
+chmod +x setup/setup.sh
+./setup/setup.sh
+```
+
+Test sensorer og motorer hver for sig, før robotten køres:
+
+```bash
+source .venv/bin/activate
+cd src
+python test_sensors.py   # viser 1 over sort og 0 over hvidt
+python test_motors.py    # kører hver motor frem og tilbage
+```
+
+Start robotten:
+
+```bash
+python robot.py
+```
+
+Stop med `Ctrl+C`. Motorerne stopper automatisk.
+
+## Hvad mangler
+
+- Finjustering af `BASE_SPEED` og `TURN_SPEED` i `src/config.py` efter de første tests
+- Håndtering af skarpe sving, hvor begge sensorer mister linjen
+- Fotos eller video af robotten på banen
+- Rapporten er under udarbejdelse og bliver lagt op, når den er færdig

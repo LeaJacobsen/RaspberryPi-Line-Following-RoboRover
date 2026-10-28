@@ -19,3 +19,5 @@ venv/
 # Operating system files
 .DS_Store
 Thumbs.db
+# Report draft – not published yet
+docs/line_follower_report_draft.docx

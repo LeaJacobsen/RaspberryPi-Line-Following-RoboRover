@@ -24,4 +24,4 @@ RIGHT_MOTOR_REVERSED = True
 
 # Første tests
 BASE_SPEED = 1.0
-TURN_SPEED = 0.90dea
+TURN_SPEED = 0.90
